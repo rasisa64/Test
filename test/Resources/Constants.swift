@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+enum Constants {
+  
+    enum Network {
+        
+        fileprivate static let urlInfoKey = "APP-URL"
+        static var baseURL:String {
+            guard let value = Bundle.main.object(forInfoDictionaryKey: urlInfoKey) as? String else {
+                return ""
+            }
+            return value
+        }
+
+    
+    }
+}
+
